@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Crimson Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hex-header {
+    background-color: #f1f1f1;
+    padding: 3px 15px;
+}
+
+.hex-path {
+    padding: 12px;
+    min-height: 34px;
+    margin: 10px 0px;
+    /* text-decoration: underline; */
+    /* color: blue; */
+}
+
+.c1 {
+    float: left;
+    width: 50%;
+}
+
+.c2 {
+    float: right;
+    width: 50%;
+}
+
+.column {
+    border: 2px dashed #f1f1f1;
+    padding: 10px;
+}
+
+.tree-column {
+    float: left;
+    width: 50%;
+}
+
+.tree-option-column {
+    float: right;
+    border-left: none;
+    width: 50%;
+    /* Should be removed. Only for demonstration */
+}
+
+.code-column {
+    padding: 12px;
+    border: 1px solid var(--saf-0);
+    border-radius: 4px;
+    background: rgba(var(--sk_foreground_min, 29, 28, 29), .04);
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.code-column pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.hex-inline-options {
+    display: none;
+}
+
+.hex-devider {
+    margin: 32px 0px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-custom {
+    float: right;
+    cursor: pointer;
+}
+
+.btn-custom.btn-disabled {
+    opacity: .65;
+    pointer-events: none;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    .hex-inline-options {
+        display: block;
+    }
+}
