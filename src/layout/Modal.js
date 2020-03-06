@@ -20,16 +20,22 @@ const Modal = (props) => {
                             <input type="text" name="name" className="form-control"
                                 value={props.value}
                                 onChange={props.handleChange}
-                                placeholder="Enter name" />
+                                placeholder="Enter name"
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' && props.value.trim()) {
+                                        props.onSubmit()
+                                    }
+                                }} />
                         </div>
                     </div>
                     <div className="modal-footer">
+
+                        <button type="button" className="btn btn-secondary" data-dismiss="modal"
+                            onClick={() => { props.onClose() }}>Close</button>
                         <button type="button"
                             className="btn btn-primary"
                             onClick={() => { props.onSubmit() }}
                         >Save changes</button>
-                        <button type="button" className="btn btn-secondary" data-dismiss="modal"
-                            onClick={() => { props.onClose() }}>Close</button>
                     </div>
                 </div>
             </div>
