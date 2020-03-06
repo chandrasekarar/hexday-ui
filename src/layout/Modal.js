@@ -17,7 +17,7 @@ const Modal = (props) => {
                     </div>
                     <div className="modal-body">
                         <div className="form-group">
-                            <input type="text" name="name" className="form-control"
+                            <input type="text" name="name" className="form-control" autoFocus
                                 value={props.value}
                                 onChange={props.handleChange}
                                 placeholder="Enter name"
