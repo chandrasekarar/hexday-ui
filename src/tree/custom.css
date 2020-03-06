@@ -1,0 +1,13 @@
+.custom-plus {
+    transform: rotate(45deg);
+}
+
+.custom-icon {
+    display: inline-block;
+    margin-left: 25px;
+    opacity: 0.3;
+}
+
+.custom-icon:hover {
+    opacity: 1
+}
